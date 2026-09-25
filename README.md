@@ -124,3 +124,9 @@ Acesse **http://localhost:5173**. Para mudar o endereço da API, copie `.env.exa
     └── pages/            # catalogo, detalheCafe, login, adminCafes, formCafe,
                           # adminComentarios, formComentario, naoEncontrada
 ```
+
+## Autor
+
+- Jonathan Greco Leite [@jonathan-greco](https://www.github.com/jonathan-greco)
+
+Repositório do projeto MVP Arquitetura de Software de Pós-graduação de Engenharia de Software, em 2026, da PUC-Rio.
