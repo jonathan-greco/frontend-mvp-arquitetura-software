@@ -1,15 +1,15 @@
 # Front-end - Café Explorer (MVP)
 
-Projeto de Front-End para a disciplina de Arquitetura de Software do curso de Pós-Graduação em Engenharia de Software (2026) da PUC-Rio.
-
 **SPA (Single Page Application)** que apresenta variedades de café consumindo a **API de Cafés** (Flask), com uma **área administrativa** para gerenciar cafés e comentários.
 
 ## Tecnologias
 
-- HTML + **TypeScript** (sem framework)
-- **Bootstrap 5** + Bootstrap Icons
-- **Vite** (servidor de desenvolvimento, build e servidor do container)
-- **Docker**
+| Item | Uso |
+| --- | --- |
+| HTML + **TypeScript** | Linguagens (sem frameork) |
+| **Bootstrap 5** + Bootstrap Icons | Framework de estilização |
+| **Vite** | Servidor de desenvolvimento, build e servidor do container |
+| **Docker** | Container |
 
 ## Funcionalidades
 
