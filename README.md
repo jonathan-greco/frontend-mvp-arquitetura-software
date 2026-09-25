@@ -106,7 +106,7 @@ npm install
 npm run dev
 ```
 
-Acesse **http://localhost:5173**. Para mudar o endereço da API, copie `.env.example` para `.env` e ajuste `API_URL`.
+Acesse **http://localhost:5173**.
 
 ## Estrutura
 
