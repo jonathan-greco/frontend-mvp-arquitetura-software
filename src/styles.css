@@ -1,0 +1,76 @@
+/* Tema "café" aplicado sobre o Bootstrap */
+:root {
+  --cafe-escuro: #3e2723;
+  --cafe-medio: #6d4c41;
+  --cafe-claro: #d7ccc8;
+}
+
+.bg-cafe {
+  background-color: var(--cafe-escuro);
+}
+
+.text-cafe {
+  color: var(--cafe-medio);
+}
+
+.btn-cafe {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: var(--cafe-medio);
+  --bs-btn-border-color: var(--cafe-medio);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: var(--cafe-escuro);
+  --bs-btn-hover-border-color: var(--cafe-escuro);
+  --bs-btn-active-bg: var(--cafe-escuro);
+  --bs-btn-disabled-bg: var(--cafe-medio);
+  --bs-btn-disabled-border-color: var(--cafe-medio);
+}
+
+/* Cards do catálogo */
+.card-cafe {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.card-cafe:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.12);
+}
+
+.card-cafe .card-img-top {
+  height: 200px;
+  object-fit: cover;
+  background-color: var(--cafe-claro);
+}
+
+.texto-limitado {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Imagens */
+.img-detalhe {
+  max-height: 420px;
+  width: 100%;
+  object-fit: cover;
+  background-color: var(--cafe-claro);
+}
+
+.img-miniatura {
+  width: 56px;
+  height: 56px;
+  object-fit: cover;
+  background-color: var(--cafe-claro);
+}
+
+.img-preview {
+  height: 160px; /* altura fixa: trocar a imagem não desloca o formulário */
+  width: 100%;
+  object-fit: cover;
+  background-color: var(--cafe-claro);
+}
+
+.estrelas {
+  color: #f5a623;
+  white-space: nowrap;
+}
