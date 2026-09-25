@@ -1,4 +1,4 @@
-# Café Explorer — Front-end (MVP)
+# Front-end - Café Explorer (MVP)
 
 Projeto de Front-End para a disciplina de Arquitetura de Software do curso de Pós-Graduação em Engenharia de Software (2026) da PUC-Rio.
 
