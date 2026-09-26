@@ -1,7 +1,10 @@
 import { ApiError } from '../types';
 
-/** Todas as chamadas vão para /api/v1 na mesma origem (o Vite repassa para a API). */
-const API_BASE = '/api/v1';
+/**
+ * Endereço da API. O navegador chama a API diretamente, então ela precisa ter CORS liberado.
+ * Pode ser trocado pela variável VITE_API_URL (arquivo .env ou --build-arg no Docker).
+ */
+const API_BASE: string = import.meta.env.VITE_API_URL || 'http://127.0.0.1:5000/api/v1';
 const CHAVE_SESSAO = 'cafe-explorer.sessao';
 
 // ---------- Sessão (token JWT guardado no navegador) ----------
@@ -40,7 +43,7 @@ export async function requisicao<T>(
   caminho: string,
   opcoes: { params?: Parametros; corpo?: unknown } = {},
 ): Promise<T> {
-  const url = new URL(API_BASE + caminho, window.location.origin);
+  const url = new URL(API_BASE + caminho);
   for (const [chave, valor] of Object.entries(opcoes.params ?? {})) {
     if (valor !== undefined && valor !== '') url.searchParams.set(chave, String(valor));
   }

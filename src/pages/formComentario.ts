@@ -34,7 +34,7 @@ export async function telaFormComentario({ params, query, app }: Contexto): Prom
           <div class="mb-3">
             <label for="nota" class="form-label">Nota <span class="text-danger">*</span></label>
             <select id="nota" name="nota" class="form-select">
-              ${[5, 4, 3, 2, 1].map((n) => `<option value="${n}" ${n === nota ? 'selected' : ''}>${'★'.repeat(n)} (${n})</option>`).join('')}
+              ${[5, 4, 3, 2, 1].map((n) => `<option value="${n}" ${n === nota ? 'selected' : ''}>(${n})</option>`).join('')}
             </select>
             <div class="invalid-feedback"></div>
           </div>
