@@ -97,7 +97,7 @@ Observações:
 - A API precisa aceitar conexões vindas do container, então o Flask deve escutar em `0.0.0.0` (ex.: `flask run --host=0.0.0.0`).
 - No Linux, adicione `--add-host=host.docker.internal:host-gateway` ao `docker run`.
 
-### Sem Docker (desenvolvimento)
+### Sem Docker (Localmente)
 
 Pré-requisito: Node.js 20.19+ ou 22.12+.
 
