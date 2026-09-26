@@ -5,7 +5,6 @@ import { excluirComentario, listarComentarios } from '../services/comentarios';
 
 const POR_PAGINA = 10;
 
-/** #/admin/comentarios — lista de comentários com filtro por café. */
 export async function telaAdminComentarios({ query, app }: Contexto): Promise<void> {
   const cafeId = Number(query.get('cafe')) || undefined;
   const pagina = Number(query.get('pagina')) || 1;

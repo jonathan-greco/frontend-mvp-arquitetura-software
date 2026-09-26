@@ -2,7 +2,6 @@ import { alerta, mensagemDeErro } from '../components/ui';
 import { avisar, navegar, type Contexto } from '../router';
 import { estaLogado, login, logout } from '../services/auth';
 
-/** #/admin/login */
 export function telaLogin({ query, app }: Contexto): void {
   // Só aceita voltar para rotas internas do admin.
   const voltar = query.get('voltar')?.startsWith('/admin/') ? query.get('voltar')! : '/admin/cafes';
@@ -57,7 +56,6 @@ export function telaLogin({ query, app }: Contexto): void {
   });
 }
 
-/** #/admin/sair */
 export function telaSair(): void {
   logout();
   avisar('Você saiu da área administrativa.', 'info');

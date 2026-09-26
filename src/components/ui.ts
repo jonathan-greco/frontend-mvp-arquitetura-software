@@ -1,6 +1,5 @@
 import { ApiError } from '../types';
 
-/** Escapa texto vindo da API antes de colocá-lo no HTML (evita XSS). */
 export function esc(valor: unknown): string {
   return String(valor ?? '')
     .replace(/&/g, '&amp;')
@@ -40,7 +39,6 @@ export function estrelas(nota: number): string {
   return `<span class="estrelas" title="Nota ${nota.toFixed(1)} de 5">${html}</span>`;
 }
 
-/** Imagem padrão quando o café não tem foto ou a URL falha. */
 // Usa aspas duplas no SVG: encodeURIComponent as converte em %22, sem quebrar o atributo onerror.
 const IMAGEM_PADRAO = 'data:image/svg+xml,' + encodeURIComponent(
   '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200"><rect width="400" height="200" fill="#d7ccc8"/>' +
@@ -53,7 +51,7 @@ export function imagemCafe(url: string | null, alt: string, classe: string): str
     onerror="this.onerror=null;this.src='${IMAGEM_PADRAO}'">`;
 }
 
-/** Paginação simples com links "Anterior" e "Próxima". */
+/** Paginação simples */
 export function paginacao(total: number, pagina: number, porPagina: number, link: (p: number) => string): string {
   const totalPaginas = Math.ceil(total / porPagina);
   if (totalPaginas <= 1) return '';
@@ -71,7 +69,6 @@ export function paginacao(total: number, pagina: number, porPagina: number, link
 
 /**
  * Mostra embaixo de cada campo os erros de validação devolvidos pela API (HTTP 422).
- * Retorna false se o erro não tinha detalhes por campo.
  */
 export function mostrarErrosNosCampos(form: HTMLFormElement, erro: unknown): boolean {
   form.querySelectorAll('.is-invalid').forEach((el) => el.classList.remove('is-invalid'));

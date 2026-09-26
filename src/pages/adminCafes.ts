@@ -4,7 +4,6 @@ import { listarCafes, excluirCafe } from '../services/cafes';
 
 const POR_PAGINA = 10;
 
-/** #/admin/cafes — lista dos cafés locais com ações de editar e excluir. */
 export async function telaAdminCafes({ query, app }: Contexto): Promise<void> {
   const nome = query.get('nome') ?? '';
   const pagina = Number(query.get('pagina')) || 1;

@@ -1,13 +1,8 @@
-/**
- * Tipos que espelham os dados da API de Cafés (ver Swagger em /apidocs).
- */
-
-/** local = cadastrado na API; externa = vindo da SampleAPIs Coffee (somente leitura). */
 export type OrigemCafe = 'local' | 'externa';
 
 export interface Cafe {
-  id: number | null; // null nos cafés externos
-  id_externo: number | null; // null nos cafés locais
+  id: number | null;
+  id_externo: number | null;
   origem: OrigemCafe;
   nome: string;
   descricao: string | null;
@@ -15,7 +10,6 @@ export interface Cafe {
   imagem_url: string | null;
 }
 
-/** Dados enviados ao criar/editar um café. */
 export interface CafeEntrada {
   nome: string;
   descricao?: string;
@@ -32,7 +26,6 @@ export interface Comentario {
   criado_em: string;
 }
 
-/** Formato das listagens paginadas. */
 export interface Lista<T> {
   itens: T[];
   total: number;
@@ -55,7 +48,6 @@ export interface Token {
   expira_em_segundos: number;
 }
 
-/** Erro padronizado da aplicação (criado a partir de { erro: { codigo, mensagem, detalhes } }). */
 export class ApiError extends Error {
   constructor(
     public status: number,

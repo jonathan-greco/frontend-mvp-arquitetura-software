@@ -1,13 +1,10 @@
 import { ApiError } from '../types';
 
 /**
- * Endereço da API. O navegador chama a API diretamente, então ela precisa ter CORS liberado.
- * Pode ser trocado pela variável VITE_API_URL (arquivo .env ou --build-arg no Docker).
+ * Endereço da API. O navegador chama a API diretamente, então ela precisa ter CORS liberado
  */
 const API_BASE: string = import.meta.env.VITE_API_URL || 'http://127.0.0.1:5000/api/v1';
 const CHAVE_SESSAO = 'cafe-explorer.sessao';
-
-// ---------- Sessão (token JWT guardado no navegador) ----------
 
 export function salvarToken(token: string, expiraEmSegundos: number): void {
   const sessao = { token, expiraEm: Date.now() + expiraEmSegundos * 1000 };
@@ -23,21 +20,13 @@ export function obterToken(): string | null {
   try {
     const sessao = JSON.parse(localStorage.getItem(CHAVE_SESSAO) ?? 'null');
     if (sessao && Date.now() < sessao.expiraEm) return sessao.token;
-  } catch {
-    /* sessão inválida */
-  }
+  } catch {}
   removerToken();
   return null;
 }
 
-// ---------- Requisições HTTP ----------
-
 type Parametros = Record<string, string | number | boolean | undefined>;
 
-/**
- * Ponto único de acesso à API: monta a URL, envia o token,
- * converte a resposta para JSON e transforma falhas em ApiError.
- */
 export async function requisicao<T>(
   metodo: 'GET' | 'POST' | 'PUT' | 'DELETE',
   caminho: string,

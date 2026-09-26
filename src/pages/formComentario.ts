@@ -3,14 +3,12 @@ import { avisar, navegar, type Contexto } from '../router';
 import { listarCafesLocais } from '../services/cafes';
 import { atualizarComentario, buscarComentario, criarComentario } from '../services/comentarios';
 
-/** #/admin/comentarios/novo e #/admin/comentarios/:id/editar */
 export async function telaFormComentario({ params, query, app }: Contexto): Promise<void> {
   const editando = params.id !== undefined;
   const [cafes, comentario] = await Promise.all([
     listarCafesLocais(),
     editando ? buscarComentario(Number(params.id)) : Promise.resolve(null),
   ]);
-  // Na edição o café não muda; na criação, pode vir pré-selecionado pela URL (?cafe=3).
   const cafeSelecionado = comentario?.cafe_id ?? Number(query.get('cafe'));
   const nota = comentario?.nota ?? 5;
 

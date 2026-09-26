@@ -1,7 +1,6 @@
-// Estilos: Bootstrap, ícones e o tema do projeto.
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js'; // necessário só para o menu mobile (collapse)
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import './styles.css';
 
 import { telaAdminCafes } from './pages/adminCafes';
@@ -14,7 +13,6 @@ import { telaLogin, telaSair } from './pages/login';
 import { telaNaoEncontrada } from './pages/naoEncontrada';
 import { iniciarRouter } from './router';
 
-// Mapa de rotas da SPA: caminho -> tela.
 iniciarRouter([
   // Área pública
   { caminho: '/', titulo: 'Catálogo', tela: telaCatalogo },

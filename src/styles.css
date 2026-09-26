@@ -25,7 +25,6 @@
   --bs-btn-disabled-border-color: var(--cafe-medio);
 }
 
-/* Cards do catálogo */
 .card-cafe {
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
@@ -64,7 +63,7 @@
 }
 
 .img-preview {
-  height: 160px; /* altura fixa: trocar a imagem não desloca o formulário */
+  height: 160px;
   width: 100%;
   object-fit: cover;
   background-color: var(--cafe-claro);

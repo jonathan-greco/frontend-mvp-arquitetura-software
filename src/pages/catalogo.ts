@@ -12,7 +12,6 @@ const ORDENS: Record<string, string> = {
   'id-asc': 'Mais antigos',
 };
 
-/** #/ — catálogo público com busca, ordenação e paginação (filtros ficam na URL). */
 export async function telaCatalogo({ query, app }: Contexto): Promise<void> {
   const nome = query.get('nome') ?? '';
   const ordem = ORDENS[query.get('ordem') ?? ''] ? query.get('ordem')! : 'nome-asc';

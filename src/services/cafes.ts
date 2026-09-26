@@ -10,7 +10,7 @@ export interface FiltroCafes {
   por_pagina?: number;
 }
 
-/** A fonte externa às vezes traz um item "modelo" (nome "string", sem id): ele é descartado. */
+/** A fonte externa às vezes traz um item "modelo" (nome "string", sem id)*/
 function ehValido(cafe: Cafe): boolean {
   return cafe.origem === 'local' || (cafe.id_externo !== null && cafe.nome !== 'string');
 }

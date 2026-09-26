@@ -4,7 +4,7 @@ function link(href: string, rotulo: string, ativo: boolean): string {
   return `<li class="nav-item"><a class="nav-link ${ativo ? 'active' : ''}" href="${href}">${rotulo}</a></li>`;
 }
 
-/** Barra de navegação: muda conforme a rota atual e o estado de login. */
+/** Barra de navegação */
 export function navbar(caminhoAtual: string): string {
   const em = (prefixo: string) => caminhoAtual.startsWith(prefixo);
   const noCatalogo = caminhoAtual === '/' || em('/cafes');

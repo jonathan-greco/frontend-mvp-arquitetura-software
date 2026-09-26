@@ -6,13 +6,11 @@ import { buscarCafe, buscarCafeExterno } from '../services/cafes';
 import { criarComentario, listarComentarios } from '../services/comentarios';
 import type { Cafe } from '../types';
 
-/** #/cafes/:id — café cadastrado na API. */
 export async function telaDetalheCafe({ params, app }: Contexto): Promise<void> {
   mostrarCafe(app, await buscarCafe(Number(params.id)));
   await mostrarComentarios(app, Number(params.id));
 }
 
-/** #/cafes/externo/:idExterno — café vindo da SampleAPIs (sem comentários). */
 export async function telaDetalheCafeExterno({ params, app }: Contexto): Promise<void> {
   mostrarCafe(app, await buscarCafeExterno(Number(params.idExterno)));
   app.insertAdjacentHTML('beforeend', alerta('Comentários estão disponíveis apenas para cafés cadastrados localmente.', 'info'));

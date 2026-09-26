@@ -3,7 +3,6 @@ import { avisar, navegar, type Contexto } from '../router';
 import { atualizarCafe, buscarCafe, criarCafe } from '../services/cafes';
 import type { Cafe, CafeEntrada } from '../types';
 
-/** #/admin/cafes/novo e #/admin/cafes/:id/editar — mesmo formulário para criar e editar. */
 export async function telaFormCafe({ params, app }: Contexto): Promise<void> {
   const editando = params.id !== undefined;
   const cafe: Cafe | null = editando ? await buscarCafe(Number(params.id)) : null;
@@ -51,7 +50,7 @@ export async function telaFormCafe({ params, app }: Contexto): Promise<void> {
 
   const form = app.querySelector<HTMLFormElement>('#form-cafe')!;
 
-  // Atualiza a pré-visualização quando a URL da imagem muda.
+  // Atualiza a pré-visualização quando a URL da imagem muda
   form.imagem_url.addEventListener('change', () => {
     app.querySelector('#preview')!.innerHTML = imagemCafe(form.imagem_url.value, 'Pré-visualização', 'img-preview img-thumbnail w-100');
   });
