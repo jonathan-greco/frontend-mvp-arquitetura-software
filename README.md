@@ -81,8 +81,11 @@ Pré-requisito: a **API de Cafés** em execução (por padrão em `http://127.0.
 ### Com Docker
 
 ```bash
-docker build -t cafes-front .
-docker run -d --name cafes-front -p 8080:8080 cafes-front
+docker build -t cafe-frontend .
+```
+
+```bash
+docker run -d --name cafe-frontend -p 8080:8080 cafe-frontend
 ```
 
 Acesse **http://localhost:8080**.
