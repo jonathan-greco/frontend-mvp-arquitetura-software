@@ -4,11 +4,13 @@
 
 ## Sumário
 
-[1. Tecnologias](#1-tecnologias)
-[2. Funcionalidades](#2-funcionalidades)
-[3. Arquitetura](#3-arquitetura)
-[4. Como executar](#4-como-executar)
-[5. Estrutura](#5-estrutura)
+1. [Tecnologias](#1-tecnologias)
+2. [Funcionalidades](#2-funcionalidades)
+3. [Arquitetura](#3-arquitetura)
+4. [Como executar](#4-como-executar)
+5. [Estrutura](#5-estrutura)
+
+---
 
 ## 1. Tecnologias
 
