@@ -2,6 +2,11 @@
 
 **SPA (Single Page Application)** que apresenta variedades de café consumindo a **API de Cafés** (Flask), com uma **área administrativa** para gerenciar cafés e comentários.
 
+O **Café Explorer** é uma aplicação web para explorar e gerenciar variedades de bebidas à base de café, do espresso clássico às versões geladas.
+
+O catálogo junta duas fontes de dados: os cafés cadastrados pelo administrador na REST API própria (https://github.com/jonathan-greco/rest-api-mvp-arquitetura-software) e os cafés obtidos de uma fonte externa pública. Os externos ficam identificados na tela e aparecem apenas para consulta.
+
+
 ## Sumário
 
 1. [Tecnologias](#1-tecnologias)
