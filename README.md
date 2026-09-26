@@ -90,16 +90,6 @@ docker run -d --name cafe-frontend -p 8080:8080 cafe-frontend
 
 Acesse **http://localhost:8080**.
 
-Por padrão o container procura a API em `http://host.docker.internal:5000`, ou seja, na máquina hospedeira. Para outro endereço:
-
-```bash
-docker run -d --name cafes-front -p 8080:8080 -e API_URL=http://minha-api:5000 cafes-front
-```
-
-Observações:
-- A API precisa aceitar conexões vindas do container, então o Flask deve escutar em `0.0.0.0` (ex.: `flask run --host=0.0.0.0`).
-- No Linux, adicione `--add-host=host.docker.internal:host-gateway` ao `docker run`.
-
 ### Sem Docker (Localmente)
 
 Pré-requisito: Node.js 20.19+ ou 22.12+.
