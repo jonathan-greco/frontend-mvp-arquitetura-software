@@ -78,7 +78,13 @@ flowchart TD
 
 > Pré-requisito: a **API de Cafés** em execução (por padrão em `http://127.0.0.1:5000`).
 
-### Com Docker
+### Clonar e baixar este repositório
+
+```bash
+git clone https://github.com/jonathan-greco/frontend-mvp-arquitetura-software.git
+```
+
+### Executar com Docker
 
 ```bash
 docker build -t cafe-frontend .
@@ -90,7 +96,7 @@ docker run -d --name cafe-frontend -p 8080:8080 cafe-frontend
 
 Acesse **http://localhost:8080**.
 
-### Sem Docker (Localmente)
+### Executar sem Docker (Localmente)
 
 Pré-requisito: Node.js 20.19+ ou 22.12+.
 
