@@ -76,7 +76,7 @@ flowchart TD
 
 ## Como executar
 
-Pré-requisito: a **API de Cafés** em execução (por padrão em `http://127.0.0.1:5000`).
+> Pré-requisito: a **API de Cafés** em execução (por padrão em `http://127.0.0.1:5000`).
 
 ### Com Docker
 
