@@ -2,16 +2,24 @@
 
 **SPA (Single Page Application)** que apresenta variedades de café consumindo a **API de Cafés** (Flask), com uma **área administrativa** para gerenciar cafés e comentários.
 
-## Tecnologias
+## Sumário
+
+[1. Tecnologias](#1-tecnologias)
+[2. Funcionalidades](#2-funcionalidades)
+[3. Arquitetura](#3-arquitetura)
+[4. Como executar](#4-como-executar)
+[5. Estrutura](#5-estrutura)
+
+## 1. Tecnologias
 
 | Item | Uso |
 | --- | --- |
-| HTML + **TypeScript** | Linguagens (sem frameork) |
+| HTML + **TypeScript** | Linguagens (sem framework) |
 | **Bootstrap 5** + Bootstrap Icons | Framework de estilização |
 | **Vite** | Servidor de desenvolvimento, build e servidor do container |
 | **Docker** | Container |
 
-## Funcionalidades
+## 2. Funcionalidades
 
 **Área pública**
 - Catálogo com busca por nome, ordenação, paginação e opção de incluir cafés externos (SampleAPIs Coffee)
@@ -23,7 +31,7 @@
 
 > Cafés externos são somente leitura: não podem ser editados nem receber comentários.
 
-## Arquitetura
+## 3. Arquitetura
 
 ```mermaid
 flowchart LR
@@ -74,7 +82,7 @@ flowchart TD
 | `#/admin/comentarios` | Lista de comentários | admin |
 | `#/admin/comentarios/novo` e `#/admin/comentarios/:id/editar` | Formulário de comentário | admin |
 
-## Como executar
+## 4. Como executar
 
 > Pré-requisito: baixar e executar a **REST API Café Explorer** (https://github.com/jonathan-greco/rest-api-mvp-arquitetura-software), por padrão em `http://127.0.0.1:5000`.
 
@@ -107,7 +115,7 @@ npm run dev
 
 Acesse **http://localhost:5173**.
 
-## Estrutura
+## 5. Estrutura
 
 ```
 ├── Dockerfile
