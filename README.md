@@ -1,15 +1,15 @@
-# Café Explorer — Front-end (MVP)
-
-Projeto de Front-End para a disciplina de Arquitetura de Software do curso de Pós-Graduação em Engenharia de Software (2026) da PUC-Rio.
+# Front-end - Café Explorer (MVP)
 
 **SPA (Single Page Application)** que apresenta variedades de café consumindo a **API de Cafés** (Flask), com uma **área administrativa** para gerenciar cafés e comentários.
 
 ## Tecnologias
 
-- HTML + **TypeScript** (sem framework)
-- **Bootstrap 5** + Bootstrap Icons
-- **Vite** (servidor de desenvolvimento, build e servidor do container)
-- **Docker**
+| Item | Uso |
+| --- | --- |
+| HTML + **TypeScript** | Linguagens (sem frameork) |
+| **Bootstrap 5** + Bootstrap Icons | Framework de estilização |
+| **Vite** | Servidor de desenvolvimento, build e servidor do container |
+| **Docker** | Container |
 
 ## Funcionalidades
 
@@ -76,28 +76,21 @@ flowchart TD
 
 ## Como executar
 
-Pré-requisito: a **API de Cafés** em execução (por padrão em `http://127.0.0.1:5000`).
+> Pré-requisito: a **API de Cafés** em execução (por padrão em `http://127.0.0.1:5000`).
 
 ### Com Docker
 
 ```bash
-docker build -t cafes-front .
-docker run -d --name cafes-front -p 8080:8080 cafes-front
+docker build -t cafe-frontend .
+```
+
+```bash
+docker run -d --name cafe-frontend -p 8080:8080 cafe-frontend
 ```
 
 Acesse **http://localhost:8080**.
 
-Por padrão o container procura a API em `http://host.docker.internal:5000`, ou seja, na máquina hospedeira. Para outro endereço:
-
-```bash
-docker run -d --name cafes-front -p 8080:8080 -e API_URL=http://minha-api:5000 cafes-front
-```
-
-Observações:
-- A API precisa aceitar conexões vindas do container, então o Flask deve escutar em `0.0.0.0` (ex.: `flask run --host=0.0.0.0`).
-- No Linux, adicione `--add-host=host.docker.internal:host-gateway` ao `docker run`.
-
-### Sem Docker (desenvolvimento)
+### Sem Docker (Localmente)
 
 Pré-requisito: Node.js 20.19+ ou 22.12+.
 
@@ -106,7 +99,7 @@ npm install
 npm run dev
 ```
 
-Acesse **http://localhost:5173**. Para mudar o endereço da API, copie `.env.example` para `.env` e ajuste `API_URL`.
+Acesse **http://localhost:5173**.
 
 ## Estrutura
 
@@ -124,3 +117,9 @@ Acesse **http://localhost:5173**. Para mudar o endereço da API, copie `.env.exa
     └── pages/            # catalogo, detalheCafe, login, adminCafes, formCafe,
                           # adminComentarios, formComentario, naoEncontrada
 ```
+
+## Autor
+
+- Jonathan Greco Leite [@jonathan-greco](https://www.github.com/jonathan-greco)
+
+Repositório do projeto MVP Arquitetura de Software de Pós-graduação de Engenharia de Software, em 2026, da PUC-Rio.
